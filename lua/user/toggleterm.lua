@@ -51,7 +51,10 @@ function _NODE_TOGGLE()
 	node:toggle()
 end
 
-local python3 = Terminal:new({ cmd = "python3", hidden = true })
+local python3 = Terminal:new({
+  cmd = "python3",
+  hidden = true
+})
 
 function _PYTHON3_TOGGLE()
 	python3:toggle()

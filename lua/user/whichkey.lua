@@ -174,6 +174,7 @@ local mappings = {
   t = {
     name = "Terminal",
     n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
+    l = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Lazygit" },
     p = { "<cmd>lua _PYTHON3_TOGGLE()<cr>", "Python3" },
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
