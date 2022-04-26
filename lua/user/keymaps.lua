@@ -33,9 +33,15 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
+-- General Configs
+keymap("n", "<C-d>", ":t.<CR>", { silent = true })        -- duplicate current line
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
+
+-- General Configs
+keymap("i", "<C-d>", "<ESC>:t.<CR>i", { silent = true })  -- duplicate current line
 
 -- Visual --
 -- Stay in indent mode
@@ -61,3 +67,14 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- Toggle using count
+keymap('n', 'gcc', "v:count == 0 ? '<Plug>(comment_toggle_current_linewise)' : '<Plug>(comment_toggle_linewise_count)'", opts)
+keymap('n', 'gbc', "v:count == 0 ? '<Plug>(comment_toggle_current_blockwise)' : '<Plug>(comment_toggle_blockwise_count)'", opts)
+
+-- Toggle in Op-pending mode
+keymap('n', 'gc', '<Plug>(comment_toggle_linewise)', opts)
+keymap('n', 'gb', '<Plug>(comment_toggle_blockwise)', opts)
+
+-- Toggle in VISUAL mode
+keymap('x', 'gc', '<Plug>(comment_toggle_linewise_visual)', opts)
+keymap('x', 'gb', '<Plug>(comment_toggle_blockwise_visual)', opts)

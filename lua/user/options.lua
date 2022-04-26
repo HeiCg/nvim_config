@@ -36,7 +36,7 @@ local options = {
   splitright = true,                       -- force all vertical splits to go to the right of current window
   termguicolors = true,                    -- set term gui colors (most terminals support this)
   timeoutlen = 500,                        -- time to wait for a mapped sequence to complete (in milliseconds)
-  ttimeoutlen = 0,			                   -- the time in milliseconds that is waited for a key code or mapped key sequence to complete.
+  ttimeoutlen = 200,			                   -- the time in milliseconds that is waited for a key code or mapped key sequence to complete.
   undofile = true,                         -- enable persistent undo
   updatetime = 300,                        -- faster completion (4000ms default)
   cursorline = true,                       -- highlight the current line
@@ -49,7 +49,7 @@ local options = {
   colorcolumn = "99999",
   ic = true,                               -- ignore case type
   hidden = true,                           -- ignore unsaved buffers
-  showmode = true,                         -- to show the current mode
+  showmode = false,                         -- to show the current mode
 
   -- disables
   wrap = false,                            -- display lines as one long line
