@@ -40,11 +40,11 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "wbthomason/packer.nvim"  -- Have packer manage itself
+  use "nvim-lua/popup.nvim"     -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/plenary.nvim"   -- Useful lua functions used ny lots of plugins
+  use "windwp/nvim-autopairs"   -- Autopairs, integrates with both cmp and treesitter
+  use "numToStr/Comment.nvim"   -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
   use "akinsho/bufferline.nvim"
@@ -58,8 +58,6 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
 
-  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
   -- colorscheme
   use {
     'Mofiqul/dracula.nvim',
@@ -70,7 +68,8 @@ return packer.startup(function(use)
     'bluz71/vim-nightfly-guicolors',
     'folke/tokyonight.nvim',
     'tiagovla/tokyodark.nvim',
-    'mangeshrex/everblush.vim'
+    'mangeshrex/everblush.vim',
+    'pineapplegiant/spaceduck'
   }
 
   -- cmp plugins
@@ -95,6 +94,7 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
 
   -- Treesitter
+  use "neovimhaskell/haskell-vim"
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",

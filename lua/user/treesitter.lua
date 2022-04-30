@@ -3,6 +3,11 @@ if not status_ok then
   return
 end
 
+local ft_to_parser = require"nvim-treesitter.parsers".filetype_to_parsername
+ft_to_parser.javascript = "kind"
+ft_to_parser.javascript = "kind2"
+ft_to_parser.javascript = "kindelia"
+
 configs.setup {
   ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
