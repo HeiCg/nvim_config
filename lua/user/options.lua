@@ -49,7 +49,7 @@ local options = {
   colorcolumn = "99999",
   ic = true,                               -- ignore case type
   hidden = true,                           -- ignore unsaved buffers
-  showmode = false,                         -- to show the current mode
+  showmode = false,                        -- to show the current mode
 
   -- disables
   wrap = false,                            -- display lines as one long line

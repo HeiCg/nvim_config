@@ -20,6 +20,6 @@ null_ls.setup({
     code_actions.eslint_d.with({ prefer_local = "node_modules/.bin" }),
   },
   on_attach = function()
-    vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+    vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format()")
   end,
 })
