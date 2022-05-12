@@ -180,6 +180,11 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+  k = {
+    name = 'Kind',
+    c = { "<cmd>TermExec direction=horizontal cmd='kind %:r'<cr>", "Type Check" },
+    r = { "<cmd>TermExec direction=horizontal cmd='kind %:r --run'<cr>", "Run" },
+  }
 }
 
 which_key.setup(setup)
