@@ -113,6 +113,9 @@ return packer.startup(function(use)
 
   use { 'tami5/lspsaga.nvim' }
 
+  -- Clojure Config
+  use 'Olical/conjure'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
