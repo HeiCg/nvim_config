@@ -50,6 +50,7 @@ return packer.startup(function(use)
   use("lewis6991/impatient.nvim")
   use("goolord/alpha-nvim")
   use("davidgranstrom/nvim-markdown-preview")
+  use("norcalli/nvim-colorizer.lua")
 
   -- comment
   use("numToStr/Comment.nvim") -- Easily comment stuff

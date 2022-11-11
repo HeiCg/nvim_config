@@ -24,6 +24,12 @@ require("user.alpha")
 require("user.autopairs")
 require("user.toggleterm")
 require("user.autocommands")
+require("colorizer").setup({
+  "css",
+  "javascript",
+  html = { mode = "foreground" },
+  css = { rgb_fn = true },
+})
 
 vim.cmd([[
   augroup _syntax_symbols
