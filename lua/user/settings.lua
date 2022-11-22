@@ -57,11 +57,11 @@ local options = {
   scrolloff = 8,
   sidescrolloff = 8,
   ttyfast = true,
-  colorcolumn = "99999",
+  colorcolumn = "80",
+  textwidth = 80,
   ic = true,
   hidden = true,
 
-  wrap = false,
   relativenumber = false,
   backup = false,
   writebackup = false,

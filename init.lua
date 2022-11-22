@@ -25,10 +25,10 @@ require("user.autopairs")
 require("user.toggleterm")
 require("user.autocommands")
 require("colorizer").setup({
-  "css",
-  "javascript",
-  html = { mode = "foreground" },
-  css = { rgb_fn = true },
+  user_default_options = {
+    css = true,
+    css_fn = true,
+  },
 })
 
 vim.cmd([[
