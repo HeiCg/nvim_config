@@ -14,7 +14,16 @@ project.setup({
     "pattern",
   },
 
-  patterns = { "=repos", ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json" },
+  patterns = {
+    "=repos",
+    ".git",
+    "_darcs",
+    ".hg",
+    ".bzr",
+    ".svn",
+    "Makefile",
+    "package.json",
+  },
 
   -- Table of lsp clients to ignore by name
   -- eg: { "efm", ... }

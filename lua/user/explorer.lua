@@ -26,12 +26,13 @@ nvim_tree.setup({
   },
 
   view = {
-    adaptive_size = true,
+    adaptive_size = false,
     side = "left",
     width = 30,
     number = false,
     relativenumber = false,
     hide_root_folder = false,
+    preserve_window_proportions = true,
   },
 
   git = {
@@ -48,14 +49,6 @@ nvim_tree.setup({
     open_file = {
       resize_window = false,
       quit_on_open = false,
-      window_picker = {
-        enable = true,
-        chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
-        exclude = {
-          filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame" },
-          buftype = { "nofile", "terminal", "help" },
-        },
-      },
     },
   },
 
@@ -110,6 +103,9 @@ nvim_tree.setup({
   diagnostics = {
     enable = true,
     show_on_dirs = true,
+    severity = {
+      max = vim.diagnostic.severity.ERROR,
+    },
     icons = {
       hint = "",
       info = "",

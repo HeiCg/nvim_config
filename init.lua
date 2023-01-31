@@ -1,14 +1,14 @@
-require("user.plugins")
-require("user.settings")
 require("user.colorscheme")
 require("user.treesitter")
+require("user.plugins")
+require("user.settings")
 require("user.whichkey")
 require("user.keymaps")
 require("user.explorer")
 require("user.cmp")
 require("user.lsp")
-require("lspsaga").init_lsp_saga({
-  code_action_lightbulb = {
+require("lspsaga").setup({
+  lightbulb = {
     virtual_text = false,
   },
 })

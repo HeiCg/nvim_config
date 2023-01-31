@@ -42,6 +42,7 @@ end
 
 local function lsp_highlight_document(client)
   -- Set autocommands conditional on server_capabilities
+  client.server_capabilities.semanticTokensProvider = nil
   local status_ok, illuminate = pcall(require, "illuminate")
   if not status_ok then
     return

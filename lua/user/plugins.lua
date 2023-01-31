@@ -40,12 +40,12 @@ packer.init({
 return packer.startup(function(use)
   -- Others
   use("wbthomason/packer.nvim") -- Have packer manage itself
+  use("b0o/schemastore.nvim")
   use("windwp/nvim-autopairs")
   use("windwp/nvim-ts-autotag")
   use("kyazdani42/nvim-web-devicons")
   use("kyazdani42/nvim-tree.lua")
   use("folke/which-key.nvim")
-  use("nvim-lua/plenary.nvim")
   use("ahmedkhalf/project.nvim")
   use("lewis6991/impatient.nvim")
   use("goolord/alpha-nvim")

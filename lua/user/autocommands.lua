@@ -5,6 +5,8 @@ vim.cmd([[
     autocmd TextYankPost * silent!lua require('vim.highlight').on_yank({higroup = 'Visual', timeout = 200})
     autocmd BufWinEnter * :set formatoptions-=cro
     autocmd FileType qf set nobuflisted
+    autocmd BufRead,BufNewFile *.scss set filetype=scss.css
+    autocmd FileType scss set iskeyword+=-
   augroup end
   augroup _git
     autocmd!
@@ -24,6 +26,11 @@ vim.cmd([[
   augroup _alpha
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
+  augroup end
+  augroup _handlebars
+    autocmd!
+    au BufNewFile,BufRead *.handlebars set filetype=html
+    au BufNewFile,BufRead *.handlebars set syntax=html
   augroup end
   " augroup _kind
   "   autocmd!

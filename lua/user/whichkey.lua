@@ -3,6 +3,25 @@ if not status_ok then
   return
 end
 
+function _Sass_watch_file()
+  local build_dir = "build/stylesheets/index.css"
+  local file_name = vim.fn.expand("%:t")
+  vim.loop.spawn("sass", {
+    args = { "sass --watch", file_name, build_dir },
+  })
+end
+
+function _Sass_compile()
+  local build_dir = "build/stylesheets/index.css"
+  local file_name = vim.fn.expand("%:t")
+  Sass_compile = vim.loop.spawn("sass", {
+    args = { file_name, build_dir },
+  }, function()
+    print("Compile was finished")
+    Sass_compile:close()
+  end)
+end
+
 local setup = {
   plugins = {
     marks = true, -- shows a list of your marks on ' and `
@@ -96,8 +115,8 @@ local mappings = {
   ["c"] = { "<cmd>BufferLinePickClose<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-  ["zd"] = { "<cmd>setglobal nofoldenable<CR>", "Disable Fold" },
-  ["ze"] = { "<cmd>setglobal enable<CR>", "Enable Fold" },
+  ["zd"] = { "<cmd>set foldlevel=999<CR>", "Disable Fold" },
+  ["ze"] = { "<cmd>set foldlevel=2<CR>", "Enable Fold" },
   B = {
     ["m"] = {
       name = "Move Buffer",
@@ -175,6 +194,11 @@ local mappings = {
   r = {
     name = "Runners",
     p = { "<cmd>TermExec direction=horizontal cmd='python %'<cr>", "Python" },
+    s = {
+      name = "sass",
+      ["f"] = { "<cmd>lua _Sass_watch_file()<cr>", "watch file" },
+      ["c"] = { "<cmd>lua _Sass_compile()<cr>", "compile" },
+    },
   },
 }
 
