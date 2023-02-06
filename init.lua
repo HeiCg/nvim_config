@@ -1,40 +1,16 @@
-require("user.colorscheme")
-require("user.treesitter")
-require("user.plugins")
-require("user.settings")
-require("user.whichkey")
-require("user.keymaps")
-require("user.explorer")
-require("user.cmp")
-require("user.lsp")
-require("lspsaga").setup({
-  lightbulb = {
-    virtual_text = false,
-  },
-})
-require("user.trouble")
-require("user.project")
-require("user.telescope")
-require("user.comment")
-require("user.gitsigns")
-require("user.lualine")
-require("user.bufferline")
-require("user.impatient")
-require("user.alpha")
-require("user.autopairs")
-require("user.toggleterm")
-require("user.autocommands")
-require("colorizer").setup({
-  user_default_options = {
-    css = true,
-    css_fn = true,
-  },
-})
-
-vim.cmd([[
-  augroup _syntax_symbols
-    autocmd!
-    autocmd BufwinEnter * :syntax match keyword "lambda" conceal cchar=λ
-    autocmd BufwinEnter * :set conceallevel=1
-  augroup end
-]])
+require("utils")
+require("config.settings")
+require("config.keymaps")
+require("config.theme")
+require("plugins.plugins")
+require("plugins.nvim_tree")
+require("plugins.which_key")
+require("plugins.treesitter")
+require("plugins.comment")
+require("plugins.lualine")
+require("plugins.bufferline")
+require("lsp")
+require("plugins.trouble")
+require("config.autocommands")
+require("lsp_lines").setup()
+require("plugins.autopairs")
