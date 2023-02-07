@@ -52,4 +52,4 @@ The theme default is [rose-pine](https://github.com/rose-pine/neovim), to change
 #### <a id="lualine-theme">Lualine theme</a>
 The lualine theme is setup auto, but in some sections the colors was set manually
 
-So that the themes of the all sections are automatically configured you just change the /lua/user/lualine.lua file commenting the color options in each sections.
+So that the themes of the all sections are automatically configured you just change the /lua/plugins/lualine.lua file commenting the color options in each sections.
