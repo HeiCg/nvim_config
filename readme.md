@@ -12,27 +12,29 @@
 </ul>
 
 ## <a id="requirements">Requirements</a>
-1. https://github.com/BurntSushi/ripgrep (Telescope)
+1. for everything to work, nodejs must be installed in version 15.14.0 with nvm
+    > "$HOME/.nvm/versions/node/v15.14.0/bin"
+
+2. https://github.com/BurntSushi/ripgrep (Telescope)
 ```sh
 sudo apt install ripgrep
 ```
 
-2. https://github.com/sharkdp/fd (Telescope)
+3. https://github.com/sharkdp/fd (Telescope)
 ```sh
 sudo apt install fd-find
 ```
 
-3. Pandoc (MarkdownPreview)
+4. Pandoc (MarkdownPreview)
 ```sh
 sudo apt install pandoc
 ```
 
-4. live-server (MarkdownPreview)
+5. live-server (MarkdownPreview)
 ```
 npm install -g @compodoc/live-server
 ```
 
-> 5. (Implicit?) to install live-server you'll needed the nodejs
 
 ## <a id="setup">Setup</a>
 
@@ -44,7 +46,8 @@ https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono/
 
 
 ### <a id="theme">Theme</a>
-The theme default is [rose-pine](https://github.com/rose-pine/neovim), to change theme you can just modify /lua/user/colorsheme.lua file
+The theme default is [rose-pine](https://github.com/rose-pine/neovim), to change theme you can just modify /lua/config/theme/init.lua file
+> this folder will not be created on your system as it is not tracked by git
 
 #### <a id="lualine-theme">Lualine theme</a>
 The lualine theme is setup auto, but in some sections the colors was set manually
