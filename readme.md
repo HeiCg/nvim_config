@@ -1,3 +1,7 @@
+<img alt="neovim" src="/images/neovim.png">
+<img alt="status line" src="/images/statusline.png">
+
+
 <link rel="stylesheet" href="./style.css">
 
 # Summary
