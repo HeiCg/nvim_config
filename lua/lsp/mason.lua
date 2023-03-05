@@ -27,6 +27,7 @@ local servers = {
   "clangd",
   "dockerls",
   "elmls",
+  "kotlin_language_server",
 }
 
 lsp_installer.setup({
@@ -48,6 +49,7 @@ for _, lsp in ipairs(servers) do
   if has_custom_opts then
     opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
   end
+  lspconfig[lsp].setup(opts)
   if lsp == "jsonls" then
     lspconfig[lsp].setup({
       settings = {
@@ -57,7 +59,5 @@ for _, lsp in ipairs(servers) do
         },
       },
     })
-  else
-    lspconfig[lsp].setup(opts)
   end
 end

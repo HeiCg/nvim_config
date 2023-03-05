@@ -171,6 +171,15 @@ return packer.startup(function(use)
     config = function() require("rose-pine").setup() end,
   })
   use("pineapplegiant/spaceduck")
+
+  use({
+    "jackMort/ChatGPT.nvim",
+    requires = {
+      "MunifTanjim/nui.nvim",
+    },
+  })
+
+  use("Shatur/neovim-session-manager")
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end

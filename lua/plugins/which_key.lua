@@ -159,6 +159,10 @@ local mappings = {
   r = {
     name = "Runners",
     p = { "<cmd>TermExec direction=horizontal cmd='python %'<cr>", "python" },
+    k = {
+      "<cmd>TermExec direction=horizontal cmd='kotlinc % -include-runtime -d .jar/%:r.jar && java -jar .jar/%:r.jar'<cr>",
+      "kotlin",
+    },
   },
 }
 

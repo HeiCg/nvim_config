@@ -6,7 +6,7 @@ end
 local formatting = null_ls.builtins.formatting
 local completion = null_ls.builtins.completion
 local diagnostics = null_ls.builtins.diagnostics
-local code_actions = null_ls.builtins.code_actions
+-- local code_actions = null_ls.builtins.code_actions
 
 local lsp_formatting = function(bufnr)
   vim.lsp.buf.format({
@@ -36,18 +36,14 @@ null_ls.setup({
     -- formatting
     formatting.trim_whitespace,
     formatting.stylua,
-    formatting.reorder_python_imports,
+    -- formatting.reorder_python_imports,
 
     -- completion
     completion.spell,
     completion.tags,
 
-    -- code actions
-    code_actions.eslint,
-    code_actions.refactoring,
-
     -- diagnostics
-    diagnostics.flake8,
+    -- diagnostics.flake8,
   },
   on_attach = on_attach,
 })

@@ -37,6 +37,13 @@ vim.cmd([[
     au BufNewFile,BufRead *.handlebars set filetype=html
     au BufNewFile,BufRead *.handlebars set syntax=html
   augroup end
+  augroup _kotlin
+    autocmd!
+    au BufNewFile,BufRead *.kt setlocal shiftwidth=4
+    au BufNewFile,BufRead *.kt setlocal tabstop=4
+    au BufNewFile,BufRead *.kt setlocal softtabstop=4
+    " au BufNewFile,BufRead *.kt set filetype=kotlin
+  augroup end
   " augroup _kind
   "   autocmd!
   "   au BufNewFile,BufRead *.kind2 set filetype=kind2
