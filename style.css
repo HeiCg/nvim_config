@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+
+* {
+  font-family: "JetBrains Mono", monospace;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding-bottom: 0.5rem;
+}
+
+ul > ul > li:before {
+  content: "\03bb";
+  margin-right: 0.2rem;
+}
