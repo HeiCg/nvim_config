@@ -49,7 +49,7 @@ set("laststatus", 0)
 set("mouse", "a")
 set("pumblend", 10) -- pseudo-transparency for the popup-menu
 set("pumheight", 10) -- Maximum number of entries in a popup
-set("scrolloff", 4)
+set("scrolloff", 100)
 set("sidescrolloff", 8) -- Columns of context
 set("signcolumn", "yes:1") -- Always show the signcolumn, otherwise it would shift the text each time
 enable("splitbelow")

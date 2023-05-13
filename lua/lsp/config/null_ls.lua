@@ -16,13 +16,22 @@ return {
       local nls = require("null-ls")
       return {
         sources = {
-          nls.builtins.formatting.stylua,
+          nls.builtins.formatting.stylua.with({
+            condition = function(utils) return utils.root_has_file({ "stylua.toml", ".stylua.toml" }) end,
+          }),
+          nls.builtins.formatting.trim_whitespace,
+          nls.builtins.formatting.trim_newlines,
           nls.builtins.formatting.shfmt,
           nls.builtins.diagnostics.flake8,
           nls.builtins.formatting.autopep8,
           nls.builtins.formatting.prettierd,
           nls.builtins.formatting.isort,
           nls.builtins.formatting.black,
+          nls.builtins.completion.spell,
+          nls.builtins.completion.tags,
+          nls.builtins.formatting.jq,
+          nls.builtins.formatting.nginx_beautifier,
+          nls.builtins.formatting.sql_formatter,
         },
       }
     end,
